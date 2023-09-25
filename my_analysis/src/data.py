@@ -12,7 +12,10 @@ TABLE_NAMES = {
     "pai_task_table"
 }
 
+DATA_FOLDER = os.path.join("..", "data")
 
+def check_data():
+    assert os.path.isdir(DATA_FOLDER), f"{DATA_FOLDER} does not exist"
 
 
 def check_table_name(table_name):
@@ -26,7 +29,7 @@ def get_header_path(table_name):
 
 def get_data_path(table_name):
     check_table_name(table_name)
-    return os.path.join("..", "data", table_name + ".csv")
+    return os.path.join(DATA_FOLDER, table_name + ".csv")
 
 
 def load_table(table_name):

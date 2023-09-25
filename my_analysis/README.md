@@ -8,6 +8,12 @@ On Windows (i.e. without `curl`):
 2. Click on each link to trigger download.
 3. "Extract here" each downloaded `tar.gz` with WinRAR to get CSVs.
 
+On Linux, just run (from `src`): 
+
+```bash
+bash prep_data.sh
+```
+
 ## Ideas 
 
 1. Given a particular job, track it's available GPUs over time.
