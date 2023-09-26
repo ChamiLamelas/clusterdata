@@ -14,6 +14,16 @@ On Linux, just run (from `src`):
 bash prep_data.sh
 ```
 
+## Existing Work
+
+Existing work from NSDI paper: 
+* Low task GPU utilization (0.042). 
+* Peak job request is 1000 GPUs.
+* High tasks repetition (65% repeated 5 times) -- don't explain how they identify duplicate tasks.
+* 60% of most jobs have queueing delay of max 10s.
+* 10% of jobs requesting > 1 GPU can wait hours.
+* < 4K GPUs allocated at any given time
+
 ## Ideas 
 
 1. Given a particular job, track it's available GPUs over time.
