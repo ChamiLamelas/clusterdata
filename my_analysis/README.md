@@ -35,4 +35,4 @@ Existing work from NSDI paper:
 * We drop all NaN end times. NaN end times occur for tasks that have failed, terminated, and are still running. For running tasks that makes sense. However, we can't really do anything about terminated and failed ones. We assume the scheduler gets GPUs back for failed and terminated tasks, but we don't know when they did.
 * Now, to compute availability we sort tasks by start and end time. We get two lists and then loop and every task that starts, we take its requested GPU count away from the total. Then for every ending task we give the GPU count back. At times where a task starts and ends then we give and take at the same time.
 * The result is that a lot of GPUs appear free. in fact, a large portion of GPUs remain available. This would indicate that we really aren't getting the full picture from the trace and our truncations of the trace.
-
+* They do not give their source code for figure 8 which is closest to what we are interested in (which shows GPU usage over a 24 HR time period). However, it seems that even in that plot, with GPU sharing, there is high GPU availability.
